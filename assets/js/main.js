@@ -42,9 +42,7 @@ function getParameterByName(name) {
 
 					// Images (in the format of 'url': 'alignment').
 						images: {
-							'images/bg01.jpg': 'center',
-							'images/bg02.jpg': 'center',
-							'images/bg03.jpg': 'center'
+							'images/bg.jpg': 'center'
 						},
 
 					// Delay.
@@ -158,10 +156,10 @@ function getParameterByName(name) {
 
 					// Disable submit.
 						$submit.disabled = true;
-			
+
             var webhook = new Stamplay.Webhook(stamplay_webhookid);
 
-            var regExp = new RegExp("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$");						
+            var regExp = new RegExp("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$");
 						var valid = regExp.test($email.value);
 
 						if (valid) {
@@ -175,7 +173,7 @@ function getParameterByName(name) {
 								$form.reset();
 							  $submit.disabled = false;
 							  $message._show('error', 'Please type a valid email address');
-						}						
+						}
 
 				});
 
